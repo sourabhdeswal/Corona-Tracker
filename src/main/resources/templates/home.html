@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+     	<title>corona_tracker</title>
+		<meta http-eqiv="Content-Type" content="text/html; charset=UTF-8" />
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	
+	</head >
+	
+			<style>
+			.center {
+			  display: block;
+			  margin-left: auto;
+			  margin-right: auto;
+		     	  width: 30%;		     	 
+		     	   height:5%;
+			}
+			
+			.jumbotron{
+			background-color:Mediumseagreen;
+			}
+			.container>h1{
+			text-align:center;
+			}
+			.container>p{
+			text-align:center;
+			}
+			.heading-color{
+			background-color:Orange;
+			}
+			.display-4{
+			color:white;
+			}
+			.lead{
+			color:white;
+			}
+			</style>
+
+     <body>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu1kiCKcZDJqv3I_-d9M6I7f-h15PoQYCk0Q&usqp=CAU" alt="coronavirus image" class="center">
+     	<div class="container">
+
+ 		<h1>CoronaVirus Tracker Application</h1>
+
+  		<p><i>This Application Shows The Number Of Current Cases of  Coronavirus Throughout The World</i></p> 
+
+	     <div class="jumbotron">
+			
+	 	 	<h1 class="display-4" th:text="${Totalreportedcases}"></h1>
+	  		<p class="lead">Total Number Of Cases As Of Now All Over The Globe </p>
+	  		<hr class="my-4">
+	 		<h1 class="display-4" th:text="${Totalnewcases}"></h1>
+	  		<p class="lead">Total Number Of New Cases</p>
+	 		
+          </div>
+
+		<table class="table">
+		
+		     <tr class="heading-color">
+				<th>State</th>
+				<th>Country</th>
+				<th>Total Cases Reported</th>
+				<th>New Cases</th>
+			</tr>
+				
+			<tr th:each="locationstats :${locationstat}">
+				<td th:text="${locationstats.states}"></td>
+				<td th:text="${locationstats.country}"></td>	
+				<td th:text="${locationstats.latesttotalcases}">0</td>
+				<td th:text="${locationstats.difference}">0</td>
+			</tr>	
+	
+		</table>
+	</div>
+	
+</body>
+</html>
