@@ -1,4 +1,24 @@
-# Coronavirus Tracker
+# CoronaVirus-Tracker
+Spring Boot Java app to track coronavirus confirmed cases across the globe
+
+Tools and technologies used: 
+* IDE - Intellij Idea; 
+* JDK - 1.8 or later;
+* Spring Web - 2.7; 
+* Spring Boot DevTools; 
+* Thymeleaf;
+
+Development Steps: 
+* Create an Intellij Idea Dynamic Web Project; 
+* Add Dependencies; 
+* Project Structure; 
+* Create a Service - CoronaVirusDataService.java; 
+* Create a Model - LocationStats.java; 
+* Create a Controller - HomeController.java; 
+* Create a home.html; 
+* Demo;
+
+
 > Coronavirus Tracker can be useful to know the basic statistics of the Coronavirus cases of different states in the country and variations of the current day and previous day.
 
 ## About Coronavirus
@@ -21,3 +41,9 @@
 ### [Spring Boot tutorial - Refernce](https://www.youtube.com/watch?v=8hjNG9GZGnQ)
 
 Retrieving data from https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv
+
+Main Page:
+![Screenshot (39)](https://user-images.githubusercontent.com/86052693/171726190-68009838-9a9d-419e-a55b-7707c0fd6635.png)
+
+Statistic:
+![Screenshot (40)](https://user-images.githubusercontent.com/86052693/171726241-9f95997e-30e0-457b-8a50-d07e1e99e753.png)
